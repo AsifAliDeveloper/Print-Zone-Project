@@ -1,0 +1,103 @@
+/* style.css */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+header .navbar-brand img {
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+header .btn {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+header .form-control {
+  border-radius: 20px;
+}
+
+
+/* Carousel */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  text-align: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item:nth-child(1) {
+  transform: translateX(0);
+}
+
+.carousel-item:nth-child(2) {
+  transform: translateX(100%);
+}
+
+.carousel-item:nth-child(3) {
+  transform: translateX(200%);
+}
+
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0);
+  }
+  33.333% {
+    transform: translateX(-100%);
+  }
+  66.666% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousel:hover .carousel-item {
+  animation: carousel-animation 3s infinite;
+}
+
+
+/* start hero */
+#hero{
+  background-image: url("images/hero4.png");
+  height: 90vh;
+  width: 100%;
+ background-size: cover;
+  background-position: top 25% right 0 ;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+ }
+
+ #hero h4{
+ padding-bottom: 15px;
+ }
+ #hero h1{
+ color: #088178;
+ }
+
+ .whatsapp{
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+} 
+.whatsapp img{
+ border-radius: 1000px;
+ border: 1px solid rebeccapurple;
+} 
+
+
+.rounded-circle:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
